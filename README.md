@@ -32,6 +32,3 @@ npm run dev
 
 <img src="./img.png" alt="Crypto Preview" width="100%">
 
-## Topics
-
-`nextjs` `typescript` `tailwindcss` `crypto` `cryptocurrency` `coingecko-api` `react` `web-app`
