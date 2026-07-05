@@ -924,6 +924,78 @@
       }
     }
   }
+
+  #market-chatbot {
+    @apply fixed right-4 bottom-4 z-50 flex flex-col items-end gap-3 sm:right-6 sm:bottom-6;
+
+    .chat-toggle {
+      @apply grid size-14 place-items-center rounded-full border border-green-500/40 bg-green-500 text-dark-900 shadow-2xl shadow-black/40 transition hover:bg-green-300 disabled:opacity-60;
+    }
+
+    .chat-panel {
+      @apply flex h-[min(620px,calc(100vh-120px))] w-[calc(100vw-32px)] max-w-[390px] flex-col overflow-hidden rounded-lg border border-purple-600/40 bg-dark-500 shadow-2xl shadow-black/50 sm:w-[390px];
+    }
+
+    .chat-header {
+      @apply flex items-center justify-between gap-3 border-b border-purple-600/25 bg-dark-400 px-4 py-3;
+    }
+
+    .chat-title {
+      @apply flex min-w-0 items-center gap-3;
+
+      .bot-icon {
+        @apply grid size-9 shrink-0 place-items-center rounded-md bg-green-500 text-dark-900;
+      }
+
+      h2 {
+        @apply text-base font-semibold leading-tight text-white;
+      }
+
+      p {
+        @apply text-xs text-purple-100;
+      }
+    }
+
+    .chat-actions {
+      @apply flex shrink-0 items-center gap-1;
+
+      button {
+        @apply grid size-8 place-items-center rounded-md text-purple-100 transition hover:bg-dark-500 hover:text-white;
+      }
+    }
+
+    .chat-messages {
+      @apply flex flex-1 flex-col gap-3 overflow-y-auto px-4 py-4;
+    }
+
+    .chat-message {
+      @apply max-w-[86%] whitespace-pre-wrap rounded-lg px-3 py-2 text-sm leading-6;
+
+      &.assistant {
+        @apply self-start bg-dark-400 text-purple-100;
+      }
+
+      &.user {
+        @apply self-end bg-green-500 text-dark-900;
+      }
+
+      &.loading {
+        @apply flex items-center gap-2;
+      }
+    }
+
+    .chat-form {
+      @apply flex gap-2 border-t border-purple-600/25 bg-dark-400 p-3;
+
+      input {
+        @apply min-w-0 flex-1 rounded-md border border-purple-600/30 bg-dark-700 px-3 py-2 text-sm text-white outline-none transition placeholder:text-purple-100/60 focus:border-green-500;
+      }
+
+      button {
+        @apply grid size-10 shrink-0 place-items-center rounded-md bg-green-500 text-dark-900 transition hover:bg-green-300 disabled:cursor-not-allowed disabled:opacity-50;
+      }
+    }
+  }
 }
 
 /* Custom Scrollbar Styles */
