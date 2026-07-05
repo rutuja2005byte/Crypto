@@ -13,10 +13,9 @@ const Page = async ({ params }: NextPageProps) => {
     fetcher<CoinDetailsData>(`/coins/${id}`, {
       dex_pair_format: 'contract_address',
     }),
-    fetcher<OHLCData>(`/coins/${id}/ohlc`, {
+    fetcher<OHLCData[]>(`/coins/${id}/ohlc`, {
       vs_currency: 'usd',
       days: 1,
-      interval: 'hourly',
       precision: 'full',
     }),
   ]);

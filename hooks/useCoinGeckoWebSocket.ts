@@ -79,7 +79,7 @@ export const useCoinGeckoWebSocket = ({
 
     ws.onclose = () => setIsWsReady(false);
 
-    ws.onerror = (error) => {
+    ws.onerror = () => {
       setIsWsReady(false);
     };
 
